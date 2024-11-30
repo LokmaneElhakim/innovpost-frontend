@@ -1,3 +1,4 @@
+import { BackgroundBeams } from "@/components/ui/background-beams";
 import Image from "next/image";
 
 export default function Home() {
@@ -93,9 +94,11 @@ export default function Home() {
             width={16}
             height={16}
           />
+
           Go to nextjs.org →
         </a>
       </footer>
+      <BackgroundBeams/>
     </div>
   );
 }
