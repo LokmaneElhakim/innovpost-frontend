@@ -16,32 +16,46 @@ import { ChevronsUpDown, Search } from "lucide-react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 
-const courses = [
+const servicesArray = [
   {
-    value: "File and folder structure",
-    path: "/courses/sfsd/learn",
-    label: "File and folder structure",
-  },
-
-  {
-    value: "Databases",
-    path: "/courses/bdd/learn",
-    label: "Databases",
+    value: "AP Tracking",
+    path: "https://aptracking.poste.dz",
+    label: "Services Monétiques",
   },
   {
-    value: "Algebra 3",
-    path: "/courses/algebra/learn",
-    label: "Algebra 3",
-  },
-
-  {
-    value: "Graph theory ",
-    // path: "/courses/thg/learn",
-    label: "Graph theory",
+    value: "CCP Net",
+    path: "https://ccpnet.poste.dz",
+    label: "Services Financiers (CCP)",
   },
   {
-    value: "Data architecture ",
-    label: "Data architecture",
+    value: "E-Philatelie",
+    path: "https://ephilatelie.poste.dz",
+    label: "Services Postaux",
+  },
+  {
+    value: "Baridi Net",
+    path: "https://baridinet.poste.dz",
+    label: "Services Coopérate",
+  },
+  {
+    value: "Post DZ",
+    path: "https://post.dz",
+    label: "Appels d'offres",
+  },
+  {
+    value: "Baridi Web",
+    path: "https://baridweb.poste.dz",
+    label: "E-Learning",
+  },
+  {
+    value: "Store ANEP",
+    path: "https://store-anep.poste.dz",
+    label: "Services Monétiques",
+  },
+  {
+    value: "ECCP",
+    path: "https://eccp.poste.dz",
+    label: "Services Financiers (CCP)",
   },
 ];
 
@@ -65,7 +79,7 @@ export function ComboboxDemo() {
       </PopoverTrigger>
       <PopoverContent className="w-[200px] p-0 z-[1009]">
         <Command>
-          <CommandInput placeholder="Search course..." className="h-9" />
+          <CommandInput placeholder="Search functionality..." className="h-9" />
           <CommandList>
             <CommandEmpty>
               No functionalities found, do you have any extended feedback?
@@ -74,17 +88,17 @@ export function ComboboxDemo() {
               </Button>
             </CommandEmpty>
             <CommandGroup>
-              {courses.map((course) => (
+              {servicesArray.map((service) => (
                 <CommandItem
-                  key={course.value}
-                  value={course.value}
+                  key={service.value}
+                  value={service.value}
                   onSelect={(currentValue) => {
                     setValue(currentValue === value ? "" : currentValue);
                     setOpen(false);
-                    router.replace(course.path ?? "/coming-soon");
+                    router.replace(service.path ?? "/coming-soon");
                   }}
                 >
-                  {course.label}
+                  {service.label}
                 </CommandItem>
               ))}
             </CommandGroup>

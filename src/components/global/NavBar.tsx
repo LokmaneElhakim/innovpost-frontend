@@ -29,9 +29,9 @@ import {
 export default function Nav() {
   const user: boolean = true;
   return (
-    <div className="relative z-[999]">
-      <header className="border-b bg-muted/40 ">
-        <div className="w-full mx-auto px-4 flex h-20 justify-end z-50 sticky top-0  items-center gap-4 border-b bg-background md:px-6">
+    <div className="z-[999] top-0 left-0 sticky rounded-md">
+      <header className="backdrop-blur-md">
+        <div className="w-full mx-auto px-4 flex h-20 justify-end z-50 sticky top-0  items-center gap-4 bg-background/60 dark:bg-muted/40 md:px-6">
           <Link href="/" className="ml-[10%] flex items-center space-x-2">
             <Image src="/alger-poste.svg" width={50} height={35} alt="Logo" />
           </Link>
@@ -39,7 +39,9 @@ export default function Nav() {
           <NavigationMenu className="hidden md:flex ml-[15%]">
             <NavigationMenuList className="gap-4">
               <NavigationMenuItem>
-                <NavigationMenuTrigger>Services</NavigationMenuTrigger>
+                <NavigationMenuTrigger className="bg-inherit">
+                  Services
+                </NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <div className="grid gap-3 p-6 w-[500px]">
                     <div className="grid grid-cols-2 gap-4">
@@ -111,12 +113,18 @@ export default function Nav() {
                         <div className="text-sm text-muted-foreground">
                           <ul className="text-sm list-disc pl-6">
                             <li>
-                              <Link className="hover:bg-muted" href={"#"}>
+                              <Link
+                                className="hover:bg-primary-foreground"
+                                href={"#"}
+                              >
                                 Envoie Courriers
                               </Link>
                             </li>
                             <li>
-                              <Link className="hover:bg-muted" href={"#"}>
+                              <Link
+                                className="hover:bg-primary-foreground"
+                                href={"#"}
+                              >
                                 Suivre un courier
                               </Link>
                             </li>
@@ -125,7 +133,7 @@ export default function Nav() {
                       </Link>
                       <Link
                         href="#"
-                        className="group grid gap-1 p-3  rounded-lg"
+                        className="group grid gap-1 p-3 rounded-lg"
                       >
                         <div className="font-medium">Services Corporate</div>
                         <div className="text-sm text-muted-foreground">
@@ -140,7 +148,7 @@ export default function Nav() {
                 <Link href="/contact-us" legacyBehavior passHref>
                   <NavigationMenuLink
                     className={cn(
-                      "group inline-flex h-9 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50"
+                      "group inline-flex h-9 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50"
                     )}
                   >
                     Avis
@@ -148,9 +156,11 @@ export default function Nav() {
                 </Link>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <NavigationMenuTrigger>Support</NavigationMenuTrigger>
+                <NavigationMenuTrigger className="bg-inherit">
+                  Support
+                </NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <div className="grid gap-3 p-6 w-[400px]">
+                  <div className="grid gap-3 p-6 w-[400px] bg-inherit">
                     <Link href="#" className="group grid gap-1 p-3  rounded-lg">
                       <div className="font-medium">Contact Us</div>
                     </Link>
@@ -163,7 +173,7 @@ export default function Nav() {
               <Link href="/actualites" legacyBehavior passHref>
                 <NavigationMenuLink
                   className={cn(
-                    "group inline-flex h-9 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50"
+                    "group inline-flex h-9 w-max items-center justify-center rounded-md  px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50"
                   )}
                 >
                   Actualites
