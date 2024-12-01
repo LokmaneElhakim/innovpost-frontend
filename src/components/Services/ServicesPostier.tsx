@@ -12,19 +12,14 @@ import { Button } from "@/components/ui/button";
 
 const services = [
   {
-    title: "Online Banking",
+    title: "Appels à candidatures",
     description:
-      "Access your accounts, transfer funds, and manage your finances securely from anywhere, at any time. Our user-friendly platform ensures a seamless banking experience tailored to your needs.",
+      "Algerie Poste offre une opportunité pour les talents et les idées de se faire connaître et d’accéder à des ressources ou des collaborations enrichissantes.",
   },
   {
     title: "Bill Payment",
     description:
       "Say goodbye to long queues and late fees. Our efficient bill payment service allows you to settle your utilities, subscriptions, and other bills quickly and conveniently.",
-  },
-  {
-    title: "Money Transfer",
-    description:
-      "Send money to friends, family, or business partners effortlessly. Our fast and reliable transfer service ensures your funds reach their destination safely and promptly.",
   },
 ];
 
@@ -35,7 +30,7 @@ const ServicesPostier = () => {
         <h2 className="text-3xl font-bold text-center mb-8">
           Services Postier
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-8">
           {services.map((service, index) => (
             <Card key={index} className="flex flex-col">
               <CardHeader>
@@ -50,13 +45,7 @@ const ServicesPostier = () => {
             </Card>
           ))}
         </div>
-        <div className="mt-10 text-center">
-          <Link href="/services" passHref>
-            <Button size="lg">
-              See All <span className="ml-0.5">&rarr;</span>
-            </Button>
-          </Link>
-        </div>
+
       </div>
     </section>
   );
