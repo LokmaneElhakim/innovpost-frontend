@@ -48,103 +48,99 @@ const DummyContent = () => {
     </>
   );
 };
-
 const data = [
   {
-    category: "Artificial Intelligence",
-    title: "You can do more with AI.",
-    src: "/alger-poste.svg",
-    content: <></>,
+    title: "INNOVPOST HACKATHON",
+    src: "/Actualite/Act1.png",
+    content: (
+      <div>
+        <p className="text-neutral-600 dark:text-neutral-400 text-base md:text-lg">
+        Discover the tracks !
+        Join us for the Innovpost Hackathon, an exciting 2-day event that brings together innovators, creators, and tech enthusiasts to build the future of postal services,this is an event you don’t want to miss. Let’s innovate together!
+        </p>
+        <Image
+          src="/Actualite/Act1.png"
+          alt="ACT1"
+          width={400}
+          height={250}
+          className="mt-4 rounded-lg w-full"
+        />
+      </div>
+    ),
   },
   {
-    category: "Artificial Intelligence2",
-    title: "You can do more with AI.",
-    src: "/alger-poste.svg",
-    content: <></>,
+    title: "Campagne de sensibilisation",
+    src: "/Actualite/Act2.png",
+    content: (
+      <div>
+        <p className="text-neutral-600 dark:text-neutral-400 text-base md:text-lg">
+          Nous avons ajouté de nouveaux partenaires pour vos paiements électroniques avec Edahabia. Sécurité et facilité, tout à portée de main.
+        </p>
+        <Image
+          src="/services/payment-partners.png"
+          alt="Partenaires de paiement"
+          width={400}
+          height={250}
+          className="mt-4 rounded-lg"
+        />
+      </div>
+    ),
   },
   {
-    category: "Artificial Intelligence3",
-    title: "You can do more with AI.",
-    src: "/alger-poste.svg",
-    content: <></>,
+    title: "Sondage",
+    src: "/Actualite/Act3.png",
+    content: (
+      <div>
+        <p className="text-neutral-600 dark:text-neutral-400 text-base md:text-lg">
+          Jusqu'à 20 % de réduction sur l'envoi de vos colis à l'international. Une offre limitée, alors dépêchez-vous !
+        </p>
+        <Image
+          src="/services/discount-international.png"
+          alt="Réduction internationale"
+          width={400}
+          height={250}
+          className="mt-4 rounded-lg"
+        />
+      </div>
+    ),
   },
   {
-    category: "Artificial Intelligence4",
-    title: "You can do more with AI.",
-    src: "/alger-poste.svg",
-    content: <></>,
+    category: "Nouveaux Produits",
+    title: "Découvrez nos nouveaux timbres exclusifs",
+    src: "/services/new-stamps.png",
+    content: (
+      <div>
+        <p className="text-neutral-600 dark:text-neutral-400 text-base md:text-lg">
+          Une collection spéciale pour célébrer les monuments historiques d'Algérie. Disponibles dans tous nos bureaux de poste.
+        </p>
+        <Image
+          src="/services/collectible-stamps.png"
+          alt="Timbres exclusifs"
+          width={400}
+          height={250}
+          className="mt-4 rounded-lg"
+        />
+      </div>
+    ),
   },
   {
-    category: "Artificial Intelligence5",
-    title: "You can do more with AI.",
-    src: "/alger-poste.svg",
-    content: <></>,
-  },
-  {
-    category: "Artificial Intelligence",
-    title: "You can do more with AI.",
-    src: "/alger-poste.svg",
-    content: <></>,
-  },
-  {
-    category: "Artificial Intelligence6",
-    title: "You can do more with AI.",
-    src: "/alger-poste.svg",
-    content: <></>,
-  },
-  {
-    category: "Artificial Intelligence7",
-    title: "You can do more with AI.",
-    src: "/alger-poste.svg",
-    content: <></>,
-  },
-  {
-    category: "Artificial Intelligence8",
-    title: "You can do more with AI.",
-    src: "/alger-poste.svg",
-    content: <></>,
-  },
-  {
-    category: "Artificial Intelligence9",
-    title: "You can do more with AI.",
-    src: "/alger-poste.svg",
-    content: <></>,
-  },
-  {
-    category: "Artificial Intelligence10",
-    title: "You can do more with AI.",
-    src: "/alger-poste.svg",
-    content: <></>,
-  },
-  {
-    category: "Productivity",
-    title: "Enhance your productivity.",
-    src: "/alger-poste.svg",
-    content: <></>,
-  },
-  {
-    category: "Product",
-    title: "Launching the new Apple Vision Pro.",
-    src: "/alger-poste.svg",
-    content: <></>,
+    category: "Recrutement",
+    title: "Rejoignez notre équipe",
+    src: "/services/hiring.png",
+    content: (
+      <div>
+        <p className="text-neutral-600 dark:text-neutral-400 text-base md:text-lg">
+          Nous recrutons ! Découvrez nos postes ouverts dans plusieurs domaines et contribuez à façonner l'avenir de la poste en Algérie.
+        </p>
+        <Image
+          src="/services/team-recruitment.png"
+          alt="Recrutement"
+          width={400}
+          height={250}
+          className="mt-4 rounded-lg"
+        />
+      </div>
+    ),
   },
 
-  {
-    category: "Product",
-    title: "Maps for your iPhone 15 Pro Max.",
-    src: "/alger-poste.svg",
-    content: <></>,
-  },
-  {
-    category: "iOS",
-    title: "Photography just got better.",
-    src: "/alger-poste.svg",
-    content: <></>,
-  },
-  {
-    category: "Hiring",
-    title: "Hiring for a Staff Software Engineer",
-    src: "/alger-poste.svg",
-    content: <></>,
-  },
 ];
