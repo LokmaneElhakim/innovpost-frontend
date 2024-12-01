@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import NavBar from "./global/NavBar";
 import { BackgroundBeams } from "./animations/background-beams";
-import { HeroImages } from "./animations/HeroImages";
+import { VideoDialog } from "./animations/HeroVideo";
 export default function HeroSection() {
   return (
     <>
@@ -25,17 +25,17 @@ export default function HeroSection() {
             </p>
             <div className="mt-8 flex flex-col sm:flex-row justify-center lg:justify-start gap-4 lg:max-w-none max-w-md mx-auto lg:mx-0">
               <Link
-                href="#"
+                href="/signin"
                 className="flex items-center justify-center py-3 px-6 border-2 border-transparent shadow-lg bg-blue-600 transition ease-linear hover:bg-blue-800 active:bg-blue-700 text-white rounded-full"
               >
-                Get Started
+                S&apos;inscrire maintenant
               </Link>
             </div>
             <div className="flex items-center gap-1 gap-x-2 mt-10 justify-center lg:justify-start py-5">
               <div className="flex items-center -space-x-2"></div>
               <div className="flex flex-col justify-start items-start ">
                 <span className="font-semibold text-lg text-gray-800 dark:text-gray-200">
-                  +12k
+                  +23 millions utilisateurs stisfaits
                 </span>
                 <span className="text-gray-600 dark:text-gray-300 text-sm">
                   Lovely users
@@ -45,7 +45,7 @@ export default function HeroSection() {
           </div>
           <div className="lg:w-1/2 relative lg:h-auto max-w-2xl md:max-w-3xl mx-auto hidden md:flex justify-end">
             <div className="relative w-full h-full flex items-center aspect-square overflow-hidden lg:aspect-auto">
-              <HeroImages />
+              <VideoDialog />
             </div>
           </div>
         </div>

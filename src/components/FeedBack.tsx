@@ -8,20 +8,7 @@ const Contact = () => {
   const { register, handleSubmit, reset } = useForm();
   const onSubmit = (data, e) => {
     e.preventDefault();
-    /* you'll need the secret key to send emails (contact me for access)
-     you can get your own version of it  by signing up at https://www.emailjs.com/
-    */
-    // emailjs.init("BC8sGNr9RmNvoZTJW");
-    // emailjs
-    //   .send("service_l7fduua", "template_wdfz5vk", data)
-    //   .then(function (response) {
-    //     if (response.status == 200) {
-    //       toast.success("Thanks for joining our waitlist!", {
-    //         description:
-    //           "We'll keep you informed and notify you once we launch.",
-    //       });
-    //     }
-    //   });
+    console.log(data);
   };
 
   return (
@@ -29,10 +16,12 @@ const Contact = () => {
       <div className="mx-auto max-w-[90%] sm:max-w-[80%] lg:max-w-[70%] px-4">
         <div className="mb-12 rounded-md bg-white dark:bg-inherit px-6 py-8 shadow-three sm:p-10">
           <h2 className="mb-3 text-2xl font-bold text-black dark:text-white sm:text-3xl lg:text-2xl xl:text-3xl">
-            Got feedback? Let us know! We&apos;d love to hear from you.
+            Nous apprécions vos retours ! N&apos;hésitez pas à nous les
+            partager.
           </h2>
           <p className="mb-8 text-base font-medium text-body-color">
-            Our support team will get back to you ASAP via email.
+            Notre équipe de support s&apos;engage à vous répondre dans les plus
+            brefs délais par e-mail.
           </p>
           <form>
             <div className="-mx-4 flex flex-wrap">
@@ -42,11 +31,11 @@ const Contact = () => {
                     htmlFor="name"
                     className="mb-3 block text-sm font-medium text-dark dark:text-white"
                   >
-                    Your Name
+                    Votre Nom
                   </label>
                   <input
                     type="text"
-                    placeholder="Enter your name"
+                    placeholder="Enterer votre name"
                     className="border-stroke w-full rounded-md border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
                   />
                 </div>
@@ -57,11 +46,11 @@ const Contact = () => {
                     htmlFor="email"
                     className="mb-3 block text-sm font-medium text-dark dark:text-white"
                   >
-                    Your Email
+                    Votre Email
                   </label>
                   <input
                     type="email"
-                    placeholder="Enter your email"
+                    placeholder="Enterer votre email"
                     className="border-stroke w-full rounded-md border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
                   />
                 </div>
@@ -72,12 +61,12 @@ const Contact = () => {
                     htmlFor="message"
                     className="mb-3 block text-sm font-medium text-dark dark:text-white"
                   >
-                    Your Message
+                    Votre message
                   </label>
                   <textarea
                     name="message"
                     rows={3}
-                    placeholder="Enter your message"
+                    placeholder="Enterer votre message"
                     className="border-stroke w-full resize-none rounded-md border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
                   ></textarea>
                 </div>

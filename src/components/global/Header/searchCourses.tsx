@@ -12,36 +12,50 @@ import {
   CommandList,
 } from "../../ui/command";
 import { Popover, PopoverContent, PopoverTrigger } from "../../ui/popover";
-import { ChevronsUpDown, Search } from "lucide-react";
+import { ChevronsUpDown } from "lucide-react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 
-const courses = [
+const servicesArray = [
   {
-    value: "File and folder structure",
-    path: "/courses/sfsd/learn",
-    label: "File and folder structure",
-  },
-
-  {
-    value: "Databases",
-    path: "/courses/bdd/learn",
-    label: "Databases",
+    value: "AP Tracking",
+    path: "https://aptracking.poste.dz",
+    label: "Services Monétiques",
   },
   {
-    value: "Algebra 3",
-    path: "/courses/algebra/learn",
-    label: "Algebra 3",
-  },
-
-  {
-    value: "Graph theory ",
-    // path: "/courses/thg/learn",
-    label: "Graph theory",
+    value: "CCP Net",
+    path: "https://ccpnet.poste.dz",
+    label: "Services Financiers (CCP)",
   },
   {
-    value: "Data architecture ",
-    label: "Data architecture",
+    value: "E-Philatelie",
+    path: "https://ephilatelie.poste.dz",
+    label: "Services Postaux",
+  },
+  {
+    value: "Baridi Net",
+    path: "https://baridinet.poste.dz",
+    label: "Services Coopérate",
+  },
+  {
+    value: "Post DZ",
+    path: "https://post.dz",
+    label: "Appels d'offres",
+  },
+  {
+    value: "Baridi Web",
+    path: "https://baridweb.poste.dz",
+    label: "E-Learning",
+  },
+  {
+    value: "Store ANEP",
+    path: "https://store-anep.poste.dz",
+    label: "Services Monétiques",
+  },
+  {
+    value: "ECCP",
+    path: "https://eccp.poste.dz",
+    label: "Services Financiers (CCP)",
   },
 ];
 
@@ -51,46 +65,52 @@ export function ComboboxDemo() {
   const router = useRouter();
 
   return (
-    <Popover open={open} onOpenChange={setOpen}>
-      <PopoverTrigger asChild>
-        <Button
-          variant="secondary"
-          size={"icon"}
-          role="combobox"
-          aria-expanded={open}
-          className="rounded-full h-10 w-10 flex items-center justify-center"
-        >
-          <Search className="ml-2 h-8 w-8 self-center" />
-        </Button>
-      </PopoverTrigger>
-      <PopoverContent className="w-[200px] p-0 z-[1009]">
-        <Command>
-          <CommandInput placeholder="Search course..." className="h-9" />
-          <CommandList>
-            <CommandEmpty>
-              No functionalities found, do you have any extended feedback?
-              <Button variant={"link"}>
-                <Link href={"/contact-us"}>Send feedback</Link>
-              </Button>
-            </CommandEmpty>
-            <CommandGroup>
-              {courses.map((course) => (
-                <CommandItem
-                  key={course.value}
-                  value={course.value}
-                  onSelect={(currentValue) => {
-                    setValue(currentValue === value ? "" : currentValue);
-                    setOpen(false);
-                    router.replace(course.path ?? "/coming-soon");
-                  }}
-                >
-                  {course.label}
-                </CommandItem>
-              ))}
-            </CommandGroup>
-          </CommandList>
-        </Command>
-      </PopoverContent>
-    </Popover>
+    <div className="hidden sm:block">
+      <Popover open={open} onOpenChange={setOpen}>
+        <PopoverTrigger asChild>
+          <Button
+            variant="secondary"
+            role="combobox"
+            aria-expanded={open}
+            className="w-fit justify-between px-2"
+          >
+            {value
+              ? servicesArray.find((service) => service.value === value)?.label
+              : "Selectionnez un service en ligne"}
+            <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
+          </Button>
+        </PopoverTrigger>
+        <PopoverContent className=" w-fit p-0 z-[1009]">
+          <Command>
+            <CommandInput placeholder="Recherchez un service" className="h-9" />
+            <CommandList>
+              <CommandEmpty>
+                Aucun service trouvé, avez-vous des retours détaillés ?
+                <Button variant={"link"}>
+                  <Link href={"/contact-us"} className="self-center text-wrap">
+                    Envoyez des commentaires.
+                  </Link>
+                </Button>
+              </CommandEmpty>
+              <CommandGroup>
+                {servicesArray.map((service) => (
+                  <CommandItem
+                    key={service.value}
+                    value={service.value}
+                    onSelect={(currentValue) => {
+                      setValue(currentValue === value ? "" : currentValue);
+                      setOpen(false);
+                      router.replace(service.path ?? "/coming-soon");
+                    }}
+                  >
+                    {service.label}
+                  </CommandItem>
+                ))}
+              </CommandGroup>
+            </CommandList>
+          </Command>
+        </PopoverContent>
+      </Popover>
+    </div>
   );
 }

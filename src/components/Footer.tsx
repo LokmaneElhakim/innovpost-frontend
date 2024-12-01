@@ -181,8 +181,8 @@ function Footer() {
               Contact Us
             </h1>
             <p className="font-poppins text-base text-gray-500 w-full lg:w-80 mb-6">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry.{" "}
+              Vous avez des questions ou besoin d&apos;assistance ? Notre équipe
+              est à votre disposition pour vous aider.
             </p>
             <p className="font-poppins text-base text-gray-500 w-full lg:w-80 mb-6">
               +923183561921
@@ -191,22 +191,22 @@ function Footer() {
           <div className="w-full lg:w-auto">
             <ul className="flex space-x-5 justify-center lg:justify-start lg:pt-48">
               <li className="rounded-full bg-slate-500 h-8 w-8 flex items-center justify-center transition-transform duration-300 hover:scale-110 hover:bg-blue-600">
-                <Link href="https://www.facebook.com/profile.php?id=61564157884058&mibextid=ZbWKwL">
+                <Link href="#">
                   <BiLogoFacebook className="text-white" />
                 </Link>
               </li>
               <li className="rounded-full bg-slate-500 h-8 w-8 flex items-center justify-center transition-transform duration-300 hover:scale-110 hover:bg-pink-500">
-                <Link href="https://www.instagram.com/_routimize.dz?igsh=bW5jZ2w0bGNtemt1">
+                <Link href="#">
                   <IoLogoInstagram className="text-white" />
                 </Link>
               </li>
               <li className="rounded-full bg-slate-500 h-8 w-8 flex items-center justify-center transition-transform duration-300 hover:scale-110 hover:bg-black">
-                <Link href="https://x.com/routimizedz?t=LVAKk84f7x7FW2ACu-ddHQ&s=09">
+                <Link href="#">
                   <BsTwitterX className="text-white" />
                 </Link>
               </li>
               <li className="rounded-full bg-slate-500 h-8 w-8 flex items-center justify-center transition-transform duration-300 hover:scale-110 hover:bg-blue-400">
-                <Link href="https://www.linkedin.com/company/routimize/posts/?feedView=all">
+                <Link href="#">
                   <TiSocialLinkedin className="text-white" />
                 </Link>
               </li>
