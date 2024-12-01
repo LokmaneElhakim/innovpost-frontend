@@ -10,9 +10,9 @@ import {
   CommandInput,
   CommandItem,
   CommandList,
-} from "../../ui/cmdk";
+} from "../../ui/command";
 import { Popover, PopoverContent, PopoverTrigger } from "../../ui/popover";
-import { CaretSortIcon } from "@radix-ui/react-icons";
+import { ChevronsUpDown } from "lucide-react";
 import { useRouter } from "next/navigation";
 
 const courses = [
@@ -61,7 +61,7 @@ export function ComboboxDemo() {
           {value
             ? courses.find((course) => course.value === value)?.label
             : "Select course..."}
-          <CaretSortIcon className="ml-2 h-4 w-4 shrink-0 opacity-50" />
+          <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
         </Button>
       </PopoverTrigger>
       <PopoverContent className="w-[200px] p-0">
