@@ -29,14 +29,14 @@ import {
 export default function Nav() {
   const user: boolean = true;
   return (
-    <div className="z-[999] top-0 left-0 sticky rounded-md">
+    <div className="z-[999] top-0 left-0 sticky rounded-md mx-auto">
       <header className="backdrop-blur-md">
-        <div className="w-full mx-auto px-4 flex h-20 justify-end z-50 sticky top-0  items-center gap-4 bg-background/60 dark:bg-muted/40 md:px-6">
-          <Link href="/" className="ml-[10%] flex items-center space-x-2">
+        <div className="w-full px-4 flex h-20 justify-center z-50 sticky top-0  items-center gap-4 bg-background/60 dark:bg-muted/40 md:px-6">
+          <Link href="/" className="ml-6 xl:ml[8%] flex items-center space-x-2">
             <Image src="/alger-poste.svg" width={50} height={35} alt="Logo" />
           </Link>
 
-          <NavigationMenu className="hidden md:flex ml-[15%]">
+          <NavigationMenu className="hidden lg:flex md:ml-7 xl:ml-[15%]">
             <NavigationMenuList className="gap-4">
               <NavigationMenuItem>
                 <NavigationMenuTrigger className="bg-inherit">
@@ -148,7 +148,7 @@ export default function Nav() {
                 <Link href="/contact-us" legacyBehavior passHref>
                   <NavigationMenuLink
                     className={cn(
-                      "group inline-flex h-9 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50"
+                      "hidden md:block group h-9 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50"
                     )}
                   >
                     Avis
@@ -215,7 +215,6 @@ export default function Nav() {
                   <div className="second-zindex">
                     <DropdownMenuContent align="end" className="z-[1009]">
                       <DropdownMenuLabel>
-                        {/* {user?.displayName ?? <p>Pages</p>} */}
                         <p>Pages</p>
                       </DropdownMenuLabel>
                       <DropdownMenuSeparator />
@@ -247,6 +246,7 @@ export default function Nav() {
                           Actualités
                         </Link>
                       </DropdownMenuItem>
+                      <DropdownMenuItem>Langage</DropdownMenuItem>
                       {user ? (
                         <>
                           <DropdownMenuSeparator />
@@ -256,7 +256,7 @@ export default function Nav() {
                                 console.log("clicked");
                               }}
                             >
-                              Logout
+                              Déconnecter
                             </button>
                           </DropdownMenuItem>
                         </>
@@ -264,7 +264,7 @@ export default function Nav() {
                         <>
                           <DropdownMenuSeparator />
                           <DropdownMenuItem>
-                            <Link href="/signin">Sign in</Link>
+                            <Link href="/signin">S&apos;inscrire</Link>
                           </DropdownMenuItem>
                         </>
                       )}
