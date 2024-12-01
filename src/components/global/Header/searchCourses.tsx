@@ -12,8 +12,9 @@ import {
   CommandList,
 } from "../../ui/command";
 import { Popover, PopoverContent, PopoverTrigger } from "../../ui/popover";
-import { ChevronsUpDown } from "lucide-react";
+import { ChevronsUpDown, Search } from "lucide-react";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 const courses = [
   {
@@ -54,21 +55,24 @@ export function ComboboxDemo() {
       <PopoverTrigger asChild>
         <Button
           variant="secondary"
+          size={"icon"}
           role="combobox"
           aria-expanded={open}
-          className="w-[120px] md:w-[200px] justify-between px-2"
+          className="rounded-full h-10 w-10 flex items-center justify-center"
         >
-          {value
-            ? courses.find((course) => course.value === value)?.label
-            : "Select course..."}
-          <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
+          <Search className="ml-2 h-8 w-8 self-center" />
         </Button>
       </PopoverTrigger>
-      <PopoverContent className="w-[200px] p-0">
+      <PopoverContent className="w-[200px] p-0 z-[1009]">
         <Command>
           <CommandInput placeholder="Search course..." className="h-9" />
           <CommandList>
-            <CommandEmpty>No courses found.</CommandEmpty>
+            <CommandEmpty>
+              No functionalities found, do you have any extended feedback?
+              <Button variant={"link"}>
+                <Link href={"/contact-us"}>Send feedback</Link>
+              </Button>
+            </CommandEmpty>
             <CommandGroup>
               {courses.map((course) => (
                 <CommandItem

@@ -28,11 +28,13 @@ const services = [
   },
 ];
 
-export default function Services() {
+const ServicesParticulier = () => {
   return (
     <section className="py-12 px-4 md:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-3xl font-bold text-center mb-8">Nos Services</h2>
+        <h2 className="text-3xl font-bold text-center mb-8">
+          Services Particuliers
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-6">
           {services.map((service, index) => (
             <Card key={index} className="flex flex-col">
@@ -51,6 +53,7 @@ export default function Services() {
         <div className="mt-10 text-center">
           <Link href="/services" passHref>
             <Button size="lg">
+              {" "}
               See All <span className="ml-0.5">&rarr;</span>
             </Button>
           </Link>
@@ -58,4 +61,6 @@ export default function Services() {
       </div>
     </section>
   );
-}
+};
+
+export default ServicesParticulier;

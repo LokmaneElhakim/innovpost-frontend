@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { Providers } from "./providers";
+import NavBar from "../components/global/NavBar";
+import Footer from "@/components/Footer";
+import ScrollToTop from "@/components/global/ScrollToTop";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,7 +21,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <Providers>
-        <body className={inter.className}>{children}</body>
+        <body className={`${inter.className} bg-muted/60`}>
+          <NavBar />
+          {children}
+          <ScrollToTop />
+          <Footer />
+        </body>
       </Providers>
     </html>
   );

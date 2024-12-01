@@ -30,7 +30,7 @@ export default function Nav() {
   const user: boolean = true;
   return (
     <div className="relative z-[999]">
-      <header className="border-b bg-background ">
+      <header className="border-b bg-muted/40 ">
         <div className="w-full mx-auto px-4 flex h-20 justify-end z-50 sticky top-0  items-center gap-4 border-b bg-background md:px-6">
           <Link href="/" className="ml-[10%] flex items-center space-x-2">
             <Image src="/alger-poste.svg" width={50} height={35} alt="Logo" />
@@ -38,17 +38,6 @@ export default function Nav() {
 
           <NavigationMenu className="hidden md:flex ml-[15%]">
             <NavigationMenuList className="gap-4">
-              <NavigationMenuItem>
-                <Link href="#" legacyBehavior passHref>
-                  <NavigationMenuLink
-                    className={cn(
-                      "group inline-flex h-9 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50"
-                    )}
-                  >
-                    Home
-                  </NavigationMenuLink>
-                </Link>
-              </NavigationMenuItem>
               <NavigationMenuItem>
                 <NavigationMenuTrigger>Services</NavigationMenuTrigger>
                 <NavigationMenuContent>
@@ -148,7 +137,7 @@ export default function Nav() {
                 </NavigationMenuContent>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <Link href="#" legacyBehavior passHref>
+                <Link href="/contact-us" legacyBehavior passHref>
                   <NavigationMenuLink
                     className={cn(
                       "group inline-flex h-9 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50"
@@ -165,19 +154,19 @@ export default function Nav() {
                     <Link href="#" className="group grid gap-1 p-3  rounded-lg">
                       <div className="font-medium">Contact Us</div>
                     </Link>
-                    <Link href="#" className="group grid gap-1 p-3  rounded-lg">
+                    <Link href="" className="group grid gap-1 p-3  rounded-lg">
                       <div className="font-medium">Ask our AI Support</div>
                     </Link>
                   </div>
                 </NavigationMenuContent>
               </NavigationMenuItem>
-              <Link href="#" legacyBehavior passHref>
+              <Link href="/actualites" legacyBehavior passHref>
                 <NavigationMenuLink
                   className={cn(
                     "group inline-flex h-9 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50"
                   )}
                 >
-                  Actualite
+                  Actualites
                 </NavigationMenuLink>
               </Link>
             </NavigationMenuList>
@@ -185,7 +174,7 @@ export default function Nav() {
 
           <div className="ml-auto flex items-center gap-2 sm:gap-4">
             <div className="flex w-full items-center justify-center gap-4 md:ml-auto md:gap-2 lg:gap-4">
-              <form className="ml-auto flex-1 sm:flex-initial">
+              <form className="ml-auto flex-1 sm:flex-initial z-[1009]">
                 <ComboboxDemo />
               </form>
               <ThemeToggler />
@@ -206,7 +195,7 @@ export default function Nav() {
                         fill
                         alt="user photo"
                       /> */}
-                          <CircleUser className="h-5 w-5" />
+                          <Menu className="h-full w-full" />
                         </>
                       ) : (
                         <Menu className="h-5 w-5" />
@@ -214,7 +203,7 @@ export default function Nav() {
                     </Button>
                   </DropdownMenuTrigger>
                   <div className="second-zindex">
-                    <DropdownMenuContent align="end">
+                    <DropdownMenuContent align="end" className="z-[1009]">
                       <DropdownMenuLabel>
                         {/* {user?.displayName ?? <p>Pages</p>} */}
                         <p>Pages</p>
@@ -244,7 +233,7 @@ export default function Nav() {
                         </Link>
                       </DropdownMenuItem>
                       <DropdownMenuItem>
-                        <Link href="/acrualites" className="h-full w-full">
+                        <Link href="/actualites" className="h-full w-full">
                           Actualités
                         </Link>
                       </DropdownMenuItem>
