@@ -24,7 +24,7 @@ interface CarouselProps {
 type Card = {
   src: string;
   title: string;
-  category: string;
+  category?: string;
   content: React.ReactNode;
 };
 
@@ -71,7 +71,7 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
 
   const handleCardClose = (index: number) => {
     if (carouselRef.current) {
-      const cardWidth = isMobile() ? 230 : 384; // (md:w-96)
+      const cardWidth = isMobile() ? 230 : 384;
       const gap = isMobile() ? 4 : 8;
       const scrollPosition = (cardWidth + gap) * (index + 1);
       carouselRef.current.scrollTo({
@@ -125,7 +125,7 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
                   },
                 }}
                 key={"card" + index}
-                className="last:pr-[5%] md:last:pr-[33%]  rounded-3xl"
+                className="last:pr-[5%] md:last:pr-[33%] relative bg-cover bg-center before:absolute before:inset-0 before:bg-gradient-to-t before:from-black/60 before:via-transparent  rounded-3xl"
               >
                 {item}
               </motion.div>
@@ -198,7 +198,7 @@ export const Card = ({
     <>
       <AnimatePresence>
         {open && (
-          <div className="fixed inset-0 h-screen z-50 overflow-auto">
+          <div className="fixed inset-0 h-screen overflow-auto z-[1999]">
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -260,7 +260,7 @@ export const Card = ({
           src={card.src}
           alt={card.title}
           fill
-          className="object-cover absolute z-10 inset-0"
+          className="object-fill absolute z-10 inset-0"
         />
       </motion.button>
     </>
@@ -279,7 +279,7 @@ export const BlurImage = ({
   return (
     <Image
       className={cn(
-        "transition duration-300",
+        "transition duration-300 object-center",
         isLoading ? "blur-sm" : "blur-0",
         className
       )}

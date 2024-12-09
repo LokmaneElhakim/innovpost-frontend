@@ -22,6 +22,9 @@ export default function HeroSection() {
               gestion de vos comptes à vos transactions financières, Algérie
               Poste vous accompagne avec des solutions innovantes, rapides et
               fiables. Votre satisfaction, notre priorité !
+              <span className="font-semibold text-base ml-1 text-gray-800 dark:text-gray-200">
+                +23 millions utilisateurs stisfaits
+              </span>
             </p>
             <div className="mt-8 flex flex-col sm:flex-row justify-center lg:justify-start gap-4 lg:max-w-none max-w-md mx-auto lg:mx-0">
               <Link
@@ -30,17 +33,6 @@ export default function HeroSection() {
               >
                 S&apos;inscrire maintenant
               </Link>
-            </div>
-            <div className="flex items-center gap-1 gap-x-2 mt-10 justify-center lg:justify-start py-5">
-              <div className="flex items-center -space-x-2"></div>
-              <div className="flex flex-col justify-start items-start ">
-                <span className="font-semibold text-lg text-gray-800 dark:text-gray-200">
-                  +23 millions utilisateurs stisfaits
-                </span>
-                <span className="text-gray-600 dark:text-gray-300 text-sm">
-                  Lovely users
-                </span>
-              </div>
             </div>
           </div>
           <div className="lg:w-1/2 relative lg:h-auto max-w-2xl md:max-w-3xl mx-auto hidden md:flex justify-end">

@@ -14,17 +14,17 @@ const services = [
   {
     title: "Service Monétique",
     image: "/services/ServiceM.png",
-    description: "Innovative monetary solutions tailored to your needs."
+    description: "Innovative monetary solutions tailored to your needs.",
   },
   {
     title: "Service Financier",
     image: "/services/ServiceF.png",
-    description: "Comprehensive financial services for personal growth."
+    description: "Comprehensive financial services for personal growth.",
   },
   {
     title: "Service Postaux",
     image: "/services/ServiceP.png",
-    description: "Reliable postal and shipping services."
+    description: "Reliable postal and shipping services.",
   },
 ];
 
@@ -33,59 +33,60 @@ const monetiqueServices = [
   {
     title: "Paiement électroniques",
     image: "/services/PaimentE.png",
-    description: "Achats en ligne et en magasin via Edahabia"
+    description: "Achats en ligne et en magasin via Edahabia",
   },
   {
     title: "Retraits d'argent",
     image: "/services/RetC.webp",
-    description: "Distributeurs automatiques et guichets postaux"
+    description: "Distributeurs automatiques et guichets postaux",
   },
   {
     title: "Paiement de factures",
     image: "/services/PF.jpg",
-    description: "Électricité, eau, téléphone, etc"
+    description: "Électricité, eau, téléphone, etc",
   },
   {
     title: "E-paiement",
     image: "/services/EPaiment.jpg",
-    description: "Plateforme BaridiPay pour des paiements sécurisés"
-  }
+    description: "Plateforme BaridiPay pour des paiements sécurisés",
+  },
 ];
 
 const financierServices = [
   {
     title: "Consultation de solde",
     image: "/services/ConsultC.jpg",
-    description: "Application mobile, web, ou SMS"
+    description: "Application mobile, web, ou SMS",
   },
   {
     title: "Relevé de compte",
     image: "/services/RelvC.jpg",
-    description: "Détails des transactions"
+    description: "Détails des transactions",
   },
   {
     title: "Virements et transferts",
     image: "/services/Virement.jpg",
-    description: " Entre CCP ou vers d'autres comptes"
-  }
+    description: " Entre CCP ou vers d'autres comptes",
+  },
 ];
 
 const postauxServices = [
   {
     title: "Envoi Colis EMS",
     image: "/services/COLIS.jpg",
-    description: "Expédiez vite et livrez en toute sécurité"
+    description: "Expédiez vite et livrez en toute sécurité",
   },
   {
     title: "Tracking",
     image: "/services/Tracking.png",
-    description: " En temps réel via un numéro de suivi"
+    description: " En temps réel via un numéro de suivi",
   },
   {
     title: "Vente des timbres",
     image: "/services/Timbre.jpg",
-    description: "Des timbres pour chaque occasion, simplifiez vos envois avec nous"
-  }
+    description:
+      "Des timbres pour chaque occasion, simplifiez vos envois avec nous",
+  },
 ];
 
 const ServicesParticulier = () => {
@@ -95,14 +96,16 @@ const ServicesParticulier = () => {
     setActiveServices(serviceType === activeServices ? null : serviceType);
   };
 
-  const renderServiceCards = (serviceList: Array<{
-    title: string;
-    image: string;
-    description: string;
-  }>) => {
+  const renderServiceCards = (
+    serviceList: Array<{
+      title: string;
+      image: string;
+      description: string;
+    }>
+  ) => {
     return serviceList.map((service, index) => (
-      <Card 
-        key={index} 
+      <Card
+        key={index}
         className="flex flex-col h-96 overflow-hidden transition-all duration-300 hover:shadow-2xl hover:scale-105"
       >
         <CardHeader className="pb-0">
@@ -132,12 +135,12 @@ const ServicesParticulier = () => {
         <h2 className="text-3xl font-bold text-center mb-8">
           Services Particuliers
         </h2>
-        
+
         {/* Main Services Section */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8 ">
           {services.map((service, index) => (
-            <Card 
-              key={index} 
+            <Card
+              key={index}
               className="flex flex-col h-96 overflow-hidden transition-all duration-300 hover:shadow-2xl hover:scale-105"
             >
               <CardHeader className="pb-0">
@@ -158,11 +161,11 @@ const ServicesParticulier = () => {
                 </div>
               </CardContent>
               <CardFooter className="pt-0">
-                <Button 
+                <Button
                   onClick={() => handleServiceClick(service.title)}
                   className="w-1/2 bg-blue-950 hover:bg-blue-900"
                 >
-                  {activeServices === service.title ? 'Close' : 'See all'}
+                  {activeServices === service.title ? "Close" : "See all"}
                 </Button>
               </CardFooter>
             </Card>

@@ -12,19 +12,22 @@ import { Button } from "@/components/ui/button";
 
 const services = [
   {
-    title: "Online Banking",
+    title: "Services Particuliers",
+    image: "/services/ServiceM.png",
     description:
-      "Access your accounts, transfer funds, and manage your finances securely from anywhere, at any time. Our user-friendly platform ensures a seamless banking experience tailored to your needs.",
+      "Découvrez des services conçus spécialement pour les particuliers, incluant des solutions pratiques pour vos besoins quotidiens, comme les virements, paiements et la gestion de votre courrier.",
   },
   {
-    title: "Bill Payment",
+    title: "Services Coopératifs",
+    image: "/services/ServiceFM.jpg",
     description:
-      "Say goodbye to long queues and late fees. Our efficient bill payment service allows you to settle your utilities, subscriptions, and other bills quickly and conveniently.",
+      "Des services dédiés aux entreprises et institutions, avec des solutions adaptées pour simplifier vos opérations, comme la gestion des envois de masse, les paiements sécurisés et bien plus.",
   },
   {
-    title: "Money Transfer",
+    title: "Services Postaux",
+    image: "/services/BaridiP.jpg",
     description:
-      "Send money to friends, family, or business partners effortlessly. Our fast and reliable transfer service ensures your funds reach their destination safely and promptly.",
+      "Des services postaux rapides, fiables et sécurisés. Envoyez et recevez votre courrier, colis et paquets en toute simplicité, avec la garantie d’un acheminement sûr.",
   },
 ];
 
@@ -40,9 +43,13 @@ export default function Services() {
                 <CardTitle>{service.title}</CardTitle>
               </CardHeader>
               <CardContent className="flex-grow">
-                <CardDescription>
+                <img
+                  src={service.image}
+                  alt={service.title}
+                  className="w-full h-56"
+                />
+                <CardDescription className="ml-4 mt-3">
                   {service.description}
-                  {/* bullet points */}
                 </CardDescription>
               </CardContent>
             </Card>

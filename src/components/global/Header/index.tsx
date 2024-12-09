@@ -1,27 +1,12 @@
 "use client";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
-import ThemeToggler from "./ThemeToggler";
 
-import { Button } from "../../ui/button";
 import { useState } from "react";
 
-import { CircleUser, Menu } from "lucide-react";
-
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
 import { cn } from "@/lib/utils";
 import { ComboboxDemo } from "./searchCourses";
 import Image from "next/image";
 const Header = () => {
-  const user = true; /** for preview mode only */
-  const router = useRouter();
   const [selected, setSelected] = useState("home");
 
   return (

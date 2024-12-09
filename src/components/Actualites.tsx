@@ -9,8 +9,8 @@ export function Actualites() {
   ));
 
   return (
-    <div className="w-full h-full py-20">
-      <h2 className="max-w-7xl pl-4 mx-auto text-xl md:text-5xl font-bold text-neutral-800 dark:text-neutral-200 font-sans">
+    <div className="w-full h-full py-20 bg-muted/90 ">
+      <h2 className="max-w-7xl pl-4 mx-auto text-xl text-center md:text-5xl font-bold text-neutral-800 dark:text-neutral-200 font-sans">
         Actualités
       </h2>
       <Carousel items={cards} />
@@ -18,36 +18,6 @@ export function Actualites() {
   );
 }
 
-const DummyContent = () => {
-  return (
-    <>
-      {[...new Array(3).fill(1)].map((_, index) => {
-        return (
-          <div
-            key={"dummy-content" + index}
-            className="bg-[#F5F5F7] dark:bg-neutral-800 p-8 md:p-14 rounded-3xl mb-4"
-          >
-            <p className="text-neutral-600 dark:text-neutral-400 text-base md:text-2xl font-sans max-w-3xl mx-auto">
-              <span className="font-bold text-neutral-700 dark:text-neutral-200">
-                The first rule of Apple club is that you boast about Apple club.
-              </span>
-              Keep a journal, quickly jot down a grocery list, and take amazing
-              class notes. Want to convert those notes to text? No problem.
-              Langotiya jeetu ka mara hua yaar is ready to capture every
-              thought.
-            </p>
-            <Image
-              src="/alger-poste.svg"
-              alt="Alger poste svg"
-              fill
-              className="md:w-2/3 md:h-2/3 h-full w-full object-contain mx-3"
-            />
-          </div>
-        );
-      })}
-    </>
-  );
-};
 const data = [
   {
     title: "INNOVPOST HACKATHON",
@@ -55,8 +25,10 @@ const data = [
     content: (
       <div>
         <p className="text-neutral-600 dark:text-neutral-400 text-base md:text-lg">
-        Discover the tracks !
-        Join us for the Innovpost Hackathon, an exciting 2-day event that brings together innovators, creators, and tech enthusiasts to build the future of postal services,this is an event you don’t want to miss. Let’s innovate together!
+          Discover the tracks ! Join us for the Innovpost Hackathon, an exciting
+          2-day event that brings together innovators, creators, and tech
+          enthusiasts to build the future of postal services,this is an event
+          you don&apos;t want to miss. Let&apos;s innovate together!
         </p>
         <Image
           src="/Actualite/Act1.png"
@@ -74,7 +46,9 @@ const data = [
     content: (
       <div>
         <p className="text-neutral-600 dark:text-neutral-400 text-base md:text-lg">
-          Nous avons ajouté de nouveaux partenaires pour vos paiements électroniques avec Edahabia. Sécurité et facilité, tout à portée de main.
+          Nous avons ajouté de nouveaux partenaires pour vos paiements
+          électroniques avec Edahabia. Sécurité et facilité, tout à portée de
+          main.
         </p>
         <Image
           src="/services/payment-partners.png"
@@ -92,7 +66,8 @@ const data = [
     content: (
       <div>
         <p className="text-neutral-600 dark:text-neutral-400 text-base md:text-lg">
-          Jusqu'à 20 % de réduction sur l'envoi de vos colis à l'international. Une offre limitée, alors dépêchez-vous !
+          Jusqu&apos;à 20 % de réduction sur l&apos;envoi de vos colis à
+          l&apos;international. Une offre limitée, alors dépêchez-vous !
         </p>
         <Image
           src="/services/discount-international.png"
@@ -111,7 +86,8 @@ const data = [
     content: (
       <div>
         <p className="text-neutral-600 dark:text-neutral-400 text-base md:text-lg">
-          Une collection spéciale pour célébrer les monuments historiques d'Algérie. Disponibles dans tous nos bureaux de poste.
+          Une collection spéciale pour célébrer les monuments historiques
+          d&apos;Algérie. Disponibles dans tous nos bureaux de poste.
         </p>
         <Image
           src="/services/collectible-stamps.png"
@@ -130,7 +106,8 @@ const data = [
     content: (
       <div>
         <p className="text-neutral-600 dark:text-neutral-400 text-base md:text-lg">
-          Nous recrutons ! Découvrez nos postes ouverts dans plusieurs domaines et contribuez à façonner l'avenir de la poste en Algérie.
+          Nous recrutons ! Découvrez nos postes ouverts dans plusieurs domaines
+          et contribuez à façonner l&apos;avenir de la poste en Algérie.
         </p>
         <Image
           src="/services/team-recruitment.png"
@@ -142,5 +119,4 @@ const data = [
       </div>
     ),
   },
-
 ];

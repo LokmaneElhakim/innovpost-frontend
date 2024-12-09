@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import Link from "next/link";
-import { ArrowRight, CircleUser, Menu } from "lucide-react";
+import { Menu } from "lucide-react";
 
 import {
   NavigationMenu,
@@ -40,7 +40,9 @@ export default function Nav() {
             <NavigationMenuList className="gap-4">
               <NavigationMenuItem>
                 <NavigationMenuTrigger className="bg-inherit">
-                  Services
+                  <Link href="/services" legacyBehavior passHref>
+                    Services
+                  </Link>
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <div className="grid gap-3 p-6 w-[500px]">
@@ -157,16 +159,14 @@ export default function Nav() {
               </NavigationMenuItem>
               <NavigationMenuItem>
                 <NavigationMenuTrigger className="bg-inherit">
-                  Support
+                  <Link href="/support" legacyBehavior passHref>
+                    Support
+                  </Link>
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <div className="grid gap-3 p-6 w-[400px] bg-inherit">
-                    <Link href="#" className="group grid gap-1 p-3  rounded-lg">
-                      <div className="font-medium">Contact Us</div>
-                    </Link>
-                    <Link href="" className="group grid gap-1 p-3  rounded-lg">
-                      <div className="font-medium">Ask our AI Support</div>
-                    </Link>
+                    <div className="font-medium">Contact Us</div>
+                    <div className="font-medium">Ask our AI Support</div>
                   </div>
                 </NavigationMenuContent>
               </NavigationMenuItem>
